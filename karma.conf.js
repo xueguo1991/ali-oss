@@ -18,12 +18,6 @@ module.exports = function(config) {
     //   type : 'html',
     //   dir : 'coverage-browser/'
     // },
-    proxies: {
-      '/sts': {
-        'target': 'http://127.0.0.1:3000',
-        'changeOrigin': true
-      }
-    },
     // reporters: ['progress', 'coverage'],
     reporters: ['progress'],
     port: 19876,

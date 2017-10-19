@@ -1,10 +1,9 @@
 'use strict';
 
+/* globals OSS */
 var assert = require('assert');
-// var oss = require('../');
 // var oss = OSS.Wrapper;
 var oss = OSS;
-// var sts = oss.STS;
 var urllib = require('urllib');
 var stsConfig = require('./.tmp/stsConfig.json');
 var pkg = require('../package.json');
@@ -12,15 +11,11 @@ var platform = require('platform');
 var utisl = require('./utils');
 var prefix = utisl.prefix;
 var sinon = require('sinon');
-var md5 = require('crypto-js/md5')
+var md5 = require('crypto-js/md5');
 var ossConfig;
 
 describe('browser', function () {
   before(function* () {
-    // var url = '/sts';
-    // var url = 'http://localhost:19876/sts';
-    // var result = yield urllib.request(url);
-    // var creds = JSON.parse(result.data);
     ossConfig = {
         region: stsConfig.region,
         accessKeyId: stsConfig.Credentials.AccessKeyId,
@@ -28,13 +23,6 @@ describe('browser', function () {
         stsToken: stsConfig.Credentials.SecurityToken,
         bucket: stsConfig.bucket
     };
-    // this.store = oss({
-    //   region: stsConfig.region,
-    //   accessKeyId: creds.AccessKeyId,
-    //   accessKeySecret: creds.AccessKeySecret,
-    //   stsToken: creds.SecurityToken,
-    //   bucket: stsConfig.bucket
-    // });
   });
   after(function* () {
 
