@@ -1,4 +1,6 @@
-export async function getStream(this: any, name: string, options: any = {}) {
+import { GetStreamOptions } from '../../types/params';
+
+export async function getStream(this: any, name: string, options: GetStreamOptions = {}) {
   if (options.process) {
     options.subres = options.subres || {};
     options.subres['x-oss-process'] = options.process;
