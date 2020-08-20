@@ -9,7 +9,7 @@ import { obj2xml } from '../utils/obj2xml';
  */
 const payerAll = ['BucketOwner', 'Requester'];
 
-export async function putBucketRequestPayment(this: any, bucketName: string, payer, options: any = {}) {
+export async function putBucketRequestPayment(this: any, bucketName: string, payer: 'BucketOwner' | 'Requester', options: any = {}) {
   if (!payer || payerAll.indexOf(payer) < 0) {
     throw new Error('payer must be BucketOwner or Requester');
   }

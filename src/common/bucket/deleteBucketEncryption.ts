@@ -5,7 +5,7 @@ import { checkBucketName } from '../utils/checkBucketName';
  * @param {String} bucketName - bucket name
  */
 
-export async function deleteBucketEncryption(this: any, bucketName) {
+export async function deleteBucketEncryption(this: any, bucketName: string) {
   checkBucketName(bucketName);
   const params = this._bucketRequestParams('DELETE', bucketName, 'encryption');
   params.successStatuses = [204];

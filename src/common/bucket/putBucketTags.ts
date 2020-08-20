@@ -9,7 +9,7 @@ import { checkBucketTag } from '../utils/checkBucketTag';
  * @param {Object} options
  */
 
-export async function putBucketTags(this: any, name, tag, options = {}) {
+export async function putBucketTags(this: any, name: string, tag: object, options: any = {}) {
   checkBucketName(name);
   checkBucketTag(tag);
   const params = this._bucketRequestParams('PUT', name, 'tagging', options);

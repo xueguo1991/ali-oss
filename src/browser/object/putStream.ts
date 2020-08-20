@@ -11,8 +11,7 @@ import { encodeCallback } from '../../common/utils/encodeCallback';
  * @param {Object} options
  * @return {Object}
  */
-export async function putStream(this: any, name, stream, options) {
-  options = options || {};
+export async function putStream(this: any, name: string, stream, options: any = {}) {
   options.headers = options.headers || {};
   name = objectName(name);
   if (options.contentLength) {

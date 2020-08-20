@@ -12,7 +12,7 @@ import { objectName } from '../utils/objectName';
  *        {String} options.storageClass Standard/IA/Archive
  *        {Boolean} options.ignoreSameKey  default value true
  */
-export async function postAsyncFetch(this: any, object, url, options: any = {}): Promise<object> {
+export async function postAsyncFetch(this: any, object: string, url: string, options: any = {}): Promise<object> {
   options.subres = Object.assign({ asyncFetch: '' }, options.subres);
   options.headers = options.headers || {};
   object = objectName(object);

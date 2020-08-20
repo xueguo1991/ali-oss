@@ -8,7 +8,7 @@ import { checkBucketName } from '../utils/checkBucketName';
 
 export async function getBucketPolicy(
   this: any,
-  bucketName,
+  bucketName: string,
   options: any = {}
 ) {
   checkBucketName(bucketName);

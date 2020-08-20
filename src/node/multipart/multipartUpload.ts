@@ -25,7 +25,7 @@ import { isBuffer } from '../../common/utils/isBuffer';
  *                    key2: 'value2'
  *                  }
  */
-export async function multipartUpload(this: any, name, file, options: any = {}) {
+export async function multipartUpload(this: any, name: string, file, options: any = {}) {
   this.resetCancelFlag();
   if (options.checkpoint && options.checkpoint.uploadId) {
     return await resumeMultipart.call(this, options.checkpoint, options);

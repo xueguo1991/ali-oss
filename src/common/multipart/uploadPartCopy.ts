@@ -1,5 +1,11 @@
 import { deepCopy } from '../utils/deepCopy';
 
+interface MultipartUploadCopySourceData {
+  sourceKey: string;
+  sourceBucketName: string;
+  startOffset?: number;
+  endOffset?: number;
+}
 /**
  * Upload a part copy in a multipart from the source bucket/object
  * used with initMultipartUpload and completeMultipartUpload.
@@ -15,11 +21,11 @@ import { deepCopy } from '../utils/deepCopy';
 
 export async function uploadPartCopy(
   this: any,
-  name,
-  uploadId,
-  partNo,
-  range,
-  sourceData,
+  name: string,
+  uploadId: string,
+  partNo: number,
+  range: string,
+  sourceData: MultipartUploadCopySourceData,
   options: any = {}
 ) {
   const opt = deepCopy(options);

@@ -6,8 +6,7 @@
  * @returns {{res}}
  */
 
-export async function restore(this: any, name, options) {
-  options = options || {};
+export async function restore(this: any, name: string, options: any = {}) {
   options.subres = Object.assign({ restore: '' }, options.subres);
   if (options.versionId) {
     options.subres.versionId = options.versionId;

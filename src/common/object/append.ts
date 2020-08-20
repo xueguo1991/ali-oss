@@ -6,7 +6,7 @@
  * @return {Object}
  */
 
-export async function append(this: any, name, file, options: any = {}) {
+export async function append(this: any, name: string, file, options: any = {}) {
   const { put = this.put } = options;
   if (typeof put !== 'function') {
     throw 'please set put in options, put path is browser/object/put';

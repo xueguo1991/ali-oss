@@ -28,9 +28,8 @@ import { isBuffer } from '../../common/utils/isBuffer';
  *                  }
  * @return {Object}
  */
-export async function put(this: any, name, file, options) {
+export async function put(this: any, name: string, file, options: any = {}) {
   let content;
-  options = options || {};
   name = objectName(name);
 
   if (isBuffer(file)) {

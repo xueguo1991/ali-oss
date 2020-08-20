@@ -8,7 +8,7 @@ const { obj2xml } = require('../utils/obj2xml');
  * @param {Object} options
  */
 
-export async function putBucketVersioning(this: any, name: string, status, options: any = {}) {
+export async function putBucketVersioning(this: any, name: string, status: 'Enabled' | 'Suspended', options: any = {}) {
   checkBucketName(name);
   if (!['Enabled', 'Suspended'].includes(status)) {
     throw new Error('status must be Enabled or Suspended');

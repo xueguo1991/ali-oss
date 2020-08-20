@@ -1,4 +1,4 @@
-export async function getStream(this: any, name, options: any = {}) {
+export async function getStream(this: any, name: string, options: any = {}) {
   if (options.process) {
     options.subres = options.subres || {};
     options.subres['x-oss-process'] = options.process;

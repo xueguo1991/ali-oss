@@ -8,7 +8,7 @@ import { checkBucketName } from '../utils/checkBucketName';
 
 export async function deleteBucketPolicy(
   this: any,
-  bucketName,
+  bucketName: string,
   options: any = {}
 ) {
   checkBucketName(bucketName);

@@ -6,8 +6,7 @@ import { getResource } from '../../common/utils/getResource';
 import { _signatureForURL } from '../../common/utils/signUtils';
 import { getReqUrl } from '../../common/utils/getReqUrl';
 
-export function signatureUrl(this: any, name, options) {
-  options = options || {};
+export function signatureUrl(this: any, name: string, options: any = {}) {
   name = objectName(name);
   options.method = options.method || 'GET';
   const expires = utility.timestamp() + (options.expires || 1800);

@@ -1,5 +1,14 @@
 import copy from 'copy-to';
 
+interface ListUploadsQuery {
+  delimiter?: string;
+  'max-uploads'?: string;
+  'key-marker'?: string;
+  'prefix'?: string;
+  'upload-id-marker'?: string;
+  'encoding-type'?: string;
+}
+
 /**
  * List the on-going multipart uploads
  * https://help.aliyun.com/document_detail/31997.html
@@ -7,8 +16,7 @@ import copy from 'copy-to';
  * @return {Array} the multipart uploads
  */
 
-export async function listUploads(this: any, query, options) {
-  options = options || {};
+export async function listUploads(this: any, query: ListUploadsQuery = {}, options: any = {}) {
   const opt: any = {};
   copy(options).to(opt);
   opt.subres = 'uploads';

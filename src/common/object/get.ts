@@ -10,7 +10,7 @@ import { isObject } from '../utils/isObject';
  * @param {Object} options
  * @param {{res}}
  */
-export async function get(this: any, name, file, options: any = {}) {
+export async function get(this: any, name: string, file, options: any = {}) {
   let writeStream: any = null;
   let needDestroy = false;
 

@@ -3,7 +3,7 @@ import utility from 'utility';
 import { obj2xml } from '../utils/obj2xml';
 import { objectName } from '../utils/objectName';
 
-export async function deleteMulti(this: any, names, options: any = {}) {
+export async function deleteMulti(this: any, names: any[], options: any = {}) {
   const objects: any[] = [];
   if (!names || !names.length) {
     throw new Error('names is required');

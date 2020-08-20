@@ -2,7 +2,7 @@ import { checkBucketName } from '../utils/checkBucketName';
 
 export async function deleteBucketLifecycle(
   this: any,
-  name,
+  name: string,
   options: any = {}
 ) {
   checkBucketName(name);
