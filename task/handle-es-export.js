@@ -81,10 +81,6 @@ function handleESExport() {
     );
     writeStream.write('\n');
     writeStream.write('\n');
-
-    if (i === fileList.length - 1) {
-      writeStream.end();
-    }
   });
 }
 
