@@ -6,7 +6,7 @@ declare class Client {
     ctx: any;
     userAgent: any;
     constructor(options: any, ctx: any);
-    use(...fn: any): this;
+    static use(...fn: any): typeof Client;
     setConfig(options: any, ctx: any): void;
 }
 export declare const initClient: (options: any, ctx: any) => Client;
