@@ -1,6 +1,6 @@
 {
   "name": "ali-oss-weiyi",
-  "version": "6.10.3",
+  "version": "6.10.5",
   "description": "aliyun oss(object storage service) node client",
   "main": "lib/node/index.js",
   "files": [
