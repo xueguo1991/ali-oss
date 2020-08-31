@@ -1,6 +1,6 @@
 {
   "name": "ali-oss-weiyi",
-  "version": "6.10.5",
+  "version": "6.10.17",
   "description": "aliyun oss(object storage service) node client",
   "main": "lib/node/index.js",
   "files": [
@@ -13,6 +13,7 @@
     "lib/node/index.js": "./dist/aliyun-oss-sdk.js",
     "mime": "mime/lite",
     "urllib": "./shims/xhr.js",
+    "buffer": "./shims/buffer.js",
     "utility": "./shims/utility.js",
     "crypto": "./shims/crypto/crypto.js",
     "debug": "./shims/debug",

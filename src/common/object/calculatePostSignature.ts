@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer';
 import { policy2Str } from '../utils/policy2Str';
 import { computeSignature } from '../utils/signUtils';
 import { isObject } from '../utils/isObject';

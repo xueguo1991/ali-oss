@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer';
 import { Readable } from 'stream';
 
 export class WebFileReadStream extends Readable {

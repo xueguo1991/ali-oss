@@ -1,4 +1,5 @@
 import crypto from 'crypto';
+import { Buffer } from 'buffer';
 import mime from 'mime';
 import dateFormat from 'dateformat';
 import copy from 'copy-to';
@@ -8,6 +9,7 @@ import { getResource } from '../utils/getResource';
 import { authorization } from '../utils/authorization';
 import { getReqUrl } from '../utils/getReqUrl';
 import { encoder } from '../utils/encoder';
+
 
 const _debug = debug('ali-oss');
 
